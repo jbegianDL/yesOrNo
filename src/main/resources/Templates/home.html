@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Yes or No</title>
-    <link rel="stylesheet" th:href="@{/home.css}" />
+    <link rel="stylesheet" th:href="@{/app.css}" />
 </head>
 <body>
-<div class="container">
-    <p th:text="${userAnswer}"></p>
-    <img th:src="${answerImage}"/>
+    <h1>Ask yourself a Yes or No question</h1>
+    <div class="container">
+        <a href="answer" class="button">Get your answer</a>
+    </div>
 </div>
 
 </body>

@@ -14,13 +14,19 @@ public class AnswerController {
     AnswerService answerService;
 
     @RequestMapping("/")
-    public String displayAdvice(ModelMap modelMap){
+    public String displayHome(){
+        return "home";
+    }
+
+    @RequestMapping("answer")
+    public String displayAnswer(ModelMap modelMap){
         Answer answer = answerService.fetchAnswerData();
         String userAnswer = answer.getAnswer();
         String answerImage = answer.getImage();
 
         modelMap.put("userAnswer",userAnswer);
         modelMap.put("answerImage",answerImage);
-        return "home";
+
+        return "answer";
     }
 }
